@@ -1,6 +1,8 @@
 /**
  * Created by odolejsi on 11/9/17.
  */
+import java.util.Date
+
 def log(env, int jobStart, int jobEnd, String reason, String stageName, int stageStart, int stageEnd) {
     jobStart = jobStart / 1000
     jobEnd = jobEnd / 1000

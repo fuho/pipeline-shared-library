@@ -1,7 +1,7 @@
 /**
  * Created by odolejsi on 11/9/17.
  */
-def call(stageName, body) {
+def call(String stageName, body) {
 
     def config = [:]
     body.resolveStrategy = Closure.DELEGATE_FIRST

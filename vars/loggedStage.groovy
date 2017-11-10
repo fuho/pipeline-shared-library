@@ -9,7 +9,7 @@ def log(env, int jobStart, int jobEnd, String reason, String stageName, int stag
     stageStart = stageStart / 1000
     stageEnd = stageEnd / 1000
 
-    sh """curl -X POST https://data.shared.handy-internal.com/logger/JenkinsJobLogger \
+    sh """curl -X POST http://demo5893470.mockable.io/ \
       -H 'Content-Type: application/json' \
       --data '{\
         "cloud": "kube-integration",\

@@ -35,13 +35,13 @@ def call(String stageName, body) {
     body.delegate = config
 
     stage(stageName) {
-        startTime = (new Date()).getTime()
+        startTime = new Date().getTime()
         try {
             body()
         } catch (all) {
-            log(env, -1, -1, "ERROR:${all.toString()}", stageName, startTime as int, new Date.getTime() as int)
+            log(env, -1, -1, "ERROR:${all.toString()}", stageName, startTime as int, new Date().getTime() as int)
             throw all
         }
-        log(env, -1, -1, 'N/A', stageName, startTime as int, new Date.getTime() as int)
+        log(env, -1, -1, 'N/A', stageName, startTime as int, new Date().getTime() as int)
     }
 }

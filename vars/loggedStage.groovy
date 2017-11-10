@@ -35,7 +35,7 @@ def call(String stageName, body) {
     body.delegate = config
 
     stage(stageName) {
-        startTime = new Date().getTime()
+        startTime = (new Date()).getTime()
         try {
             body()
         } catch (all) {
